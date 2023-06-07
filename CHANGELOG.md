@@ -1,5 +1,26 @@
 # Spina CMS Changelog
 
+## 2.15
+
+### 2.15.0 (May 10th, 2023)
+_Notice: ViewComponent was updated to v3 in this release, make sure your own components use the new Slots API_
+* Updated ViewComponent to v3
+* Updated gem dependencies
+* Fixed german translations
+
+## 2.14
+
+### 2.14.0 (February 22nd, 2023)
+* Added Spina::Parts::PageLink part
+* Added search to the media library
+* Added collapsable nested pages (remember to install the new migration)
+* Added hint for Spina::Parts::MultiLine
+* Fixed CSS bugs in Trix
+* Fixed bug with AttrJson 2.0
+* Fixed missing translations
+* Updated gem dependencies
+* Removed StandardRB
+
 ## 2.13
 
 ### 2.13.1 (December 13th, 2022)
