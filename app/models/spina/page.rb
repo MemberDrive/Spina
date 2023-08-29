@@ -77,11 +77,11 @@ module Spina
     end
 
     def previous_sibling
-      siblings.where("position < ?", position).sorted.last
+      siblings.where("position < ?", position).live.sorted.last
     end
 
     def next_sibling
-      siblings.where("position > ?", position).sorted.first
+      siblings.where("position > ?", position).live.sorted.first
     end
 
     def set_materialized_path
