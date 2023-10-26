@@ -35,8 +35,15 @@ module Spina
           image
         end.compact
 
-        if params[:modal]
+        if params[:origin] == 'media-picker'
           redirect_to spina.admin_media_picker_path(media_folder_id: image_params[:media_folder_id])
+        elsif params[:origin] == 'auto-file-upload'
+          render turbo_stream: turbo_stream.update(
+            'auto-file-upload-images',
+            Spina::Forms::EditorInsertImagesMetaComponent
+              .new(images: @images, trix_target_id: params[:trix_target_id])
+              .render_in(view_context)
+          )
         else
           render turbo_stream: turbo_stream.prepend("images", partial: "image", collection: @images)
         end
@@ -90,7 +97,7 @@ module Spina
       end
 
       def image_params
-        params.require(:image).permit(:media_folder_id, :file)
+        params.require(:image).permit(:media_folder_id, :file, files: [])
       end
     end
   end

@@ -1,6 +1,32 @@
 # Spina CMS Changelog
 
+## 2.17
+
+### 2.17.0 (October 6th, 2023)
+* Added support for Rails 7.1
+* Added localization for Czech language
+* Added support for multiple sections for layout parts
+* Updated page select form
+* Updated post-install message
+* Updated gem dependencies
+* Fixed: scoped collection on NavigationItems
+
+## 2.16
+
+### 2.16.0 (August 23rd, 2023)
+* Added support for custom URLs in Navigation (remember the install the new migration)
+* Added support for pasting images into the Trix editor
+* Added data-trix-button-group to trix toolbar 
+* Updated theme config to support ancestry settings
+* Updated various translations
+* Updated gem dependencies
+* Fixed: Exclude generated tailwind config from VCS
+* Fixed: Use default theme by default
+
 ## 2.15
+
+### 2.15.1 (June 28th, 2023)
+* Fix for XSS vulnerability in Pages#edit
 
 ### 2.15.0 (May 10th, 2023)
 _Notice: ViewComponent was updated to v3 in this release, make sure your own components use the new Slots API_
